@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+.container {
+  margin: 0 auto;
+  width: 85%;
+}
+
+.p-m-0 {
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+  height: auto;
+  background-color: hsl(257, 40%, 49%);
+  background-image: url(../images/bg-mobile.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+html header, body header {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  height: 120px;
+}
+html header .logo img, body header .logo img {
+  width: 200px;
+}
+html .content, body .content {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+html .content .content-img, body .content .content-img {
+  flex: 70%;
+}
+html .content .content-img img, body .content .content-img img {
+  width: 100%;
+  height: auto;
+}
+html .content .content-brief, body .content .content-brief {
+  color: #FFFFFF;
+  flex: 30%;
+  text-align: center;
+}
+html .content .content-brief .brief-heading, body .content .content-brief .brief-heading {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.9rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+html .content .content-brief .brief-text, body .content .content-brief .brief-text {
+  font-family: "Open Sans", sans-serif;
+}
+html .content .content-brief .register-btn, body .content .content-brief .register-btn {
+  display: inline-block;
+  color: hsl(257, 40%, 49%);
+  background-color: #FFFFFF;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-family: "Poppins", sans-serif;
+  padding: 10px 50px 10px;
+  border-radius: 30px;
+  margin-top: 20px;
+  box-shadow: 5px 5px 7px #555555;
+  transition: box-shadow 0.2s ease-in;
+}
+html .content .content-brief .register-btn:hover, body .content .content-brief .register-btn:hover {
+  box-shadow: 0 0;
+}
+html .footer, body .footer {
+  margin-top: 70px;
+  margin-bottom: 20px;
+  box-sizing: content-box;
+  display: flex;
+  justify-content: center;
+}
+html .footer .social-links, body .footer .social-links {
+  list-style: none;
+}
+html .footer .social-links li, body .footer .social-links li {
+  width: 20px;
+  height: auto;
+  text-align: center;
+  display: inline-block;
+  margin: 0 5px 0;
+  border: 1px solid #FFFFFF;
+  padding: 10px;
+  border-radius: 50px;
+}
+html .footer .social-links li a, body .footer .social-links li a {
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+@media screen and (min-width: 1000px) {
+  body, html {
+    height: 100% !important;
+    background-image: url(../images/bg-desktop.svg) !important;
+    background-size: cover !important;
+  }
+  body .content, html .content {
+    flex-direction: row !important;
+    height: 450px !important;
+  }
+  body .content .content-img, html .content .content-img {
+    background-size: contain !important;
+    flex: 50% !important;
+  }
+  body .content .content-brief, html .content .content-brief {
+    flex: 50% !important;
+    padding-left: 50px;
+    text-align: left !important;
+  }
+  body .content .content-brief .brief-heading, html .content .content-brief .brief-heading {
+    width: 70%;
+  }
+  body .content .content-brief .brief-text, html .content .content-brief .brief-text {
+    width: 80%;
+    font-size: 0.95rem;
+  }
+  body .footer, html .footer {
+    margin: 0 auto !important;
+    justify-content: end !important;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

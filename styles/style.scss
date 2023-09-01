@@ -1,0 +1,135 @@
+$primary-color: hsl(257, 40%, 49%);
+$secondary-color: hsl(300, 69%, 71%);
+$poppins-font: 'Poppins', sans-serif;
+$open-sans-font: 'Open Sans', sans-serif;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+.container {
+    margin: 0 auto;
+    width: 85%;
+}
+.p-m-0 {
+    padding: 0;
+    margin: 0;
+}
+html, body{
+    height: auto;
+    background-color: $primary-color;
+    background-image: url(../images/bg-mobile.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    header {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        height: 120px;
+        .logo {
+            img {
+                width: 200px;
+            }
+        }
+    }
+    .content {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        .content-img {
+            flex: 70%;
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        .content-brief {
+            color: #FFFFFF;
+            flex: 30%;
+            text-align: center;
+            .brief-heading {
+                font-family: $poppins-font;
+                font-size: 1.9rem;
+                font-weight: 600;
+                margin-bottom: 15px;
+            }
+            .brief-text {
+                font-family: $open-sans-font;
+            }
+            .register-btn {
+                display: inline-block;
+                color: $primary-color;
+                background-color: #FFFFFF;
+                text-decoration: none;
+                text-transform: capitalize;
+                font-family: $poppins-font;
+                padding: 10px 50px 10px;
+                border-radius: 30px;
+                margin-top: 20px;
+                box-shadow: 5px 5px 7px#555555;
+                transition: box-shadow 0.2s ease-in;
+                &:hover {
+                    box-shadow: 0 0;
+                }
+            }
+        }
+    }
+    .footer {
+        margin-top: 70px;
+        margin-bottom: 20px;
+        box-sizing: content-box;
+        display: flex;
+        justify-content: center;
+        .social-links {
+            list-style: none;
+            li {
+                width: 20px;
+                height: auto;
+                text-align: center;
+                display: inline-block;
+                margin: 0 5px 0;
+                border: 1px solid #FFFFFF;
+                padding: 10px;
+                border-radius: 50px;
+                a {
+                    font-size: 1.1rem;
+                    text-decoration: none;
+                    color: #FFFFFF;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 1000px) {
+    body, html {
+        height: 100% !important;
+        background-image: url(../images/bg-desktop.svg) !important;
+        background-size: cover !important;
+        .content {
+        flex-direction: row !important;
+        height: 450px !important;
+            .content-img {
+                background-size: contain !important;
+                flex: 50% !important;
+            }
+            .content-brief {
+                flex: 50% !important;
+                padding-left: 50px;
+                text-align: left !important;
+                .brief-heading {
+                    width: 70%;
+                    }
+                .brief-text {
+                    width: 80%;
+                    font-size: 0.95rem;
+                    }
+            }
+        }
+        .footer {
+            margin: 0 auto !important;
+            justify-content: end !important;
+        }
+    }
+    
+}
